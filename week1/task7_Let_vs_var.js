@@ -34,4 +34,4 @@ function x() {
   }
 }
 x();
-// The inner function c here searches for th value of b in it's lexical scope (Parent Scope) 
+// The inner function c here searches for th value of b in it's lexical scope (Parent Scope)

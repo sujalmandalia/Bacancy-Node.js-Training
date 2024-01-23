@@ -3,6 +3,6 @@
   console.log(name);
 })('sujal');
 
-(function(x,y){
-  console.log(x+y);
+(function(x, y){
+  console.log(x + y);
 })(5, 3);

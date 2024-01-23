@@ -11,7 +11,6 @@ let multipy = function(x, y) {
 let multiplyByTwo = multipy.bind(this, 2); //x = 2
 console.log(multiplyByTwo(3)); // y= 3
 
-
 //Using Function Closures
 
 function mul(x, y){

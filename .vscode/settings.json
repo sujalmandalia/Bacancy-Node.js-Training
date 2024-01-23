@@ -1,7 +1,8 @@
 {
-    "eslint.format.enable": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "eslint.lintTask.enable": true
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.lintTask.enable": true,
+  "liveServer.settings.port": 5501
 }

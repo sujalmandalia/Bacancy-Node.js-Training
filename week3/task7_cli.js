@@ -3,7 +3,7 @@ const args = process.argv.slice(2);
 // console.log(args);
 let result;
 if (isNaN(args[0]) || isNaN(args[1])) {
-  result = 'Enter Valid Operand';
+  result = 'Enter Valid Operand'
 } else {
   switch (args[2]) {
     case '+':

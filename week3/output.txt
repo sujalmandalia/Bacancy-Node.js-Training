@@ -1,0 +1,5 @@
+4 types of Streams
+ 1. Readable : used for read operation
+ 2. Writable : used for write operation
+ 3. Duplex : used for both read and write operation
+ 4. Transform : Type of duplex where output is computed based on

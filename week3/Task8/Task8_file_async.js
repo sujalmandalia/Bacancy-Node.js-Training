@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const fs = require('fs');
 
 // In async mode the file is being read in async mode so it will not  wait for the data to be fetched It will continue its execution and when the data is fetched it will run its callback

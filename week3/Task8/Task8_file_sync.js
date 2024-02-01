@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 const fs = require('fs');
 
 try {
   const data = fs.readFileSync('1.txt');
   console.log(data.toString()); // 1
 } catch (error) {
-  console.log('Error', err);
+  console.log('Error', error);
 }
 
 setTimeout(() => {

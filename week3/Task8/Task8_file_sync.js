@@ -1,10 +1,14 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('1.txt');
-console.log(data.toString()); // 1
+try {
+  const data = fs.readFileSync('1.txt');
+  console.log(data.toString()); // 1
+} catch (error) {
+  console.log('Error', err);
+}
 
 setTimeout(() => {
-  console.log('Inside Timeout 1');  // 4
+  console.log('Inside Timeout 1'); // 4
 }, 0);
 
 new Promise((resolve, reject) => {
@@ -17,4 +21,4 @@ setTimeout(() => {
   console.log('Inside Timeout 2');
 }, 1000); // 4
 
-console.log("Sujal"); // 5
+console.log('Sujal'); // 2

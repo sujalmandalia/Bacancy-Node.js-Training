@@ -14,6 +14,24 @@ const getBooks = (req, res) => {
   });
 };
 
+// Get By id
+const getBookById = (req, res) => {
+  const requestedUrl = url.parse(req.url);
+  const queryParams = requestedUrl.query;
+  const id = queryParams.split('=')[1];
+  console.log(id);
+
+  fs.readFile(`${__dirname}/../books.json`, 'utf-8', (err, books) => {
+    if (err) {
+      console.log(`Error${err}`);
+    }
+    books = JSON.parse(books);
+    books = books.filter((book) => book.id == id);
+    console.log(books);
+    res.writeHead(500, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(books));
+  });
+};
 // POST
 const createBook = (req, res) => {
   let data = '';
@@ -64,7 +82,7 @@ const deleteBook = (req, res) => {
     res.end('deleted');
   });
 };
-
+// update
 const updateBook = (req, res) => {
   const requestedUrl = url.parse(req.url);
   const queryParams = requestedUrl.query;
@@ -105,4 +123,5 @@ module.exports = {
   deleteBook,
   createBook,
   updateBook,
+  getBookById,
 };

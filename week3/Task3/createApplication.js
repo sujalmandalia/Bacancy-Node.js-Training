@@ -8,6 +8,9 @@ const createApplication = (req, res) => {
     return res.end();
   }
   const parsedUrl = url.parse(req.url);
+  if (parsedUrl.pathname === '/getbyid') {
+    controller.getBookById(req, res);
+  }
   if (parsedUrl.pathname === '/books') {
     if (req.method === 'GET') {
       controller.getBooks(req, res);

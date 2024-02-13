@@ -16,26 +16,21 @@
       <li>
         <%= task.task %>
         <form
-        action="/api/v1/tasks/update/<%= task.id %>"
-        method="POST"
-        style="display: inline"
+          action="/api/v1/tasks/update/<%= task.id %>"
+          method="POST"
+          style="display: inline"
         >
-        <input
-        type="text"
-        name="updatedTask"
-        value="<%= task.description %>"
-        required
-        />
-        <button type="submit">Update</button>
-      </form>
-      <form
-        action="/api/v1/tasks/delete/<%= task.id %>"
-        method="POST"
-        style="display: inline"
-      >
-        <button type="submit">Delete</button>
-      </form>
-    </li>
+          <input type="text" name="updatedTask" required />
+          <button type="submit">Update</button>
+        </form>
+        <form
+          action="/api/v1/tasks/delete/<%= task.id %>"
+          method="POST"
+          style="display: inline"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </li>
       <% }) %>
     </ul>
   </body>

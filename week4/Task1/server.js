@@ -9,8 +9,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
+// app.use(express.urlencoded({ extended: true })); // used to deal with query Strings
 
 app.use('/api/v1/books', bookRoutes);
 app.listen(PORT, () => {

@@ -1,9 +1,9 @@
 function Car(name, brand, year) {
-  this.nameee = name;
+  this.name = name;
   this.brandName = brand;
   this.year = year;
   this.displayInfo = function () {
-    console.log(`${name} car is of ${this.brandName} brand and of ${year}`);
+    console.log(`${this.name} car is of ${this.brandName} brand and of ${this.year}`);
   };
 }
 

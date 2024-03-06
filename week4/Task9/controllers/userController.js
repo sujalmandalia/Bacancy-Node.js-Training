@@ -85,7 +85,7 @@ export const deleteUserController = async (req, res, next) => {
       return id !== user.id;
     })
     if (users.length === data.length) {
-      return next(new ErrorHandler("No user Found With the given ID", 404));
+      return next(new ErrorHandler("No user Found With the given ID", 400));
     }
     await fs.promises.writeFile(path, JSON.stringify(users))
     return res.json({

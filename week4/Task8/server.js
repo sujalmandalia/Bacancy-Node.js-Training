@@ -11,8 +11,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.set('view engine', 'ejs');
-const PORT = 8000;
 
+const PORT = 8000;
 app.use('/api/v1/tasks', taskRouter)
 
 app.listen(PORT, () => {

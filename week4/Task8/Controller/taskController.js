@@ -37,7 +37,7 @@ export const createTask = async (req, res, next) => {
         return next(err)
       }
     })
-    return res.redirect('/api/v1/tasks');
+    return res.redirect('/tasks');
   } catch (error) {
     return next(error)
   }
@@ -55,7 +55,7 @@ export const deleteTask = async (req, res, next) => {
       if (err) {
         return next(err)
       }
-      return res.redirect('/api/v1/tasks');
+      return res.redirect('/tasks');
     })
   } catch (error) {
     return next(error)
@@ -78,7 +78,7 @@ export const updateTask = async (req, res, next) => {
         return next(err)
       }
     })
-    return res.redirect('/api/v1/tasks');
+    return res.redirect('/tasks');
   } catch (error) {
     next(error)
   }

@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable import/extensions */
 /* eslint-disable sort-imports */
 import express from 'express';

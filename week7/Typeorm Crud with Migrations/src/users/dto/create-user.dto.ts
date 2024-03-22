@@ -7,4 +7,6 @@ export class createUserDto{
 
   @IsNumber()
   age:number
+
+  
 }

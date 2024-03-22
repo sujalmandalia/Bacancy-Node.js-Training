@@ -47,6 +47,7 @@ export class UsersService {
       if(deleted.affected === 0){
         throw new BadRequestException("No User With The Given ID")
       }
+      return "User Deleted Successfully"
     } catch (error) {
       throw new BadRequestException(error.message);
     }

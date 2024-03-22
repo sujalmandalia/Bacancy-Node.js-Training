@@ -1,16 +1,26 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Product } from 'src/products/entities/product.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 @Entity()
+@ObjectType()
 export class User {
   @PrimaryGeneratedColumn()
-  id:number;
+  @Field((type) => Int)
+  id: number;
 
   @Column()
-  name:string
+  @Field()
+  name: string;
 
   @Column()
-  age:number
+  @Field()
+  age: number;
 
   @Column()
-  email:string
+  @Field({ nullable: true })
+  email: string;
+
+  @OneToMany(() => Product, (product) => product.user)
+  products: Product[];
 }
